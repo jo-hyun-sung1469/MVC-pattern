@@ -2,23 +2,22 @@
 {
     public class PlayerEntity
     {
-        private Long id { get; set; }
-        private String password { get; set; }
-        private String username { get; set; }
-        private int level { get; set; }
-        private int hp { get; set; }
-        protected int maxHp { get; set; }
-        protected int Defence { get; set; }
-        protected int agility { get; set; }
-        protected int attackDamage { get; set; }
-        private int statistics { get; set; }
-        private int Intelligence { get; set; }
-        private int maxIntelligence { get; set; }
-        private int basicattack { get; set; }
-        private String skillCooldownJson { get; set; } //배열을 JSON 문자열로 저장
-        private String buffCountJson { get; set; }
-        private int barrier { get; set; }
-
-
+        [Key]
+        public long Id { get; set; }
+        public long UserId { get; set; }//User.cs파일의 FK이다
+        public string Name { get; set; } = string.Empty;
+        public int Level { get; set; }
+        public int Hp { get; set; }
+        public int MaxHp { get; set; }
+        public int Defence { get; set; }
+        public int Agility { get; set; }
+        public int AttackDamage { get; set; }
+        public int Statpoint { get; set; }
+        public int Mana { get; set; }   
+        public int MaxMana { get; set; }
+        public int BasicAttack { get; set; }
+        public string SkillCooldownJson { get; set; } = string.Empty;//배열을 JSON 문자열로 저장
+        public string BuffCountJson { get; set; } = string.Empty;
+        public int Barrier { get; set; }
     }
 }

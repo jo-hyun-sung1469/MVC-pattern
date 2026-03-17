@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ASPServerAPI.DTOs;
 using ASPServerAPI.Services;
+using ASPServerAPI.DTOs.Auth;
 
 namespace ASPServerAPI.Controller
 {

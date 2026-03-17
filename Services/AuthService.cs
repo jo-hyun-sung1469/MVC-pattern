@@ -6,8 +6,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.Build.Utilities;
 using ASPServerAPI.Data;
-using ASPServerAPI.DTOs;
 using ASPServerAPI.Models;
+using ASPServerAPI.DTOs.Auth;
 
 namespace ASPServerAPI.Services
 {

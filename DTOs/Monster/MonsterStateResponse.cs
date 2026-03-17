@@ -1,8 +1,7 @@
-﻿namespace ASPServerAPI.Models
+﻿namespace ASPServerAPI.DTOs.Monster
 {
-    public class MonsterEntity
+    public class MonsterStateResponse
     {
-        [Key]
         public long Id { get; set; }
         public long PlayerId { get; set; }
         public string Name { get; set; } = string.Empty;
