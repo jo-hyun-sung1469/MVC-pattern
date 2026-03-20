@@ -4,6 +4,8 @@ using Microsoft.EntityFrameworkCore;
 using Micorsoft.IdentityModel.Tokens;
 using ASPServerAPI.Data;
 using ASPServerAPI.Services;
+using ASPServerAPI.Repository.Interface;
+using ASPServerAPI.Services.Interface;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,6 +31,8 @@ builder.Services.AddScoped<AuthService>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped(IMonsterRepository, MonsterRepository);
+builder.Services.AddScoped(IMonsterService, MonsterService);
 
 var app = builder.Build();
 
