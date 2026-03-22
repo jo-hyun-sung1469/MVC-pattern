@@ -35,7 +35,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped(IMonsterRepository, MonsterRepository);//의존성 주입
 builder.Services.AddScoped(IMonsterService, MonsterService);//의존성 주입
 builder.Services.AddScoped(IPlayerService, PlayerService);
-builder.Services.AddScoped(IPlayerRepository, PlayerRepository)
+builder.Services.AddScoped(IPlayerRepository, PlayerRepository);
 //요청 생성시
 var app = builder.Build();
 

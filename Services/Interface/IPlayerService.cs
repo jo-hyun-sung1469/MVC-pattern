@@ -1,4 +1,5 @@
 ﻿using ASPServerAPI.DTOs.Player;
+using ASPServerAPI.DTOs.Battle;
 using ASPServerAPI.Models;
 
 namespace ASPServerAPI.Services.Interface

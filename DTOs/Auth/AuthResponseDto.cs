@@ -8,7 +8,7 @@ namespace ASPServerAPI.DTOs.Auth
         public string Token { get; set; } = string.Empty;
         public string UserName { get; set; } = stirng.Empty;
         public long PlayerId { get; set; }
-        public PlayerStatsResponse Stats { get; set; } = new();
+        public PlayerStateResponse Stats { get; set; } = new();
         public MonsterStateResponse MonsterStats { get; set; } = new();
     }
 }

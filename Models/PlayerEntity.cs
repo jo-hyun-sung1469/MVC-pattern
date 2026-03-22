@@ -1,8 +1,9 @@
-﻿namespace ASPServerAPI.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ASPServerAPI.Models
 {
     public class PlayerEntity
     {
-        [Key]
         public long Id { get; set; }
         public long UserId { get; set; }//User.cs파일의 FK이다
         public string Name { get; set; } = string.Empty;

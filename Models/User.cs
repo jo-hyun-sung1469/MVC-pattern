@@ -1,4 +1,6 @@
-﻿namespace ASPServerAPI.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ASPServerAPI.Models
 {
     public class User
     {
@@ -9,3 +11,4 @@
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     }
 }
+    

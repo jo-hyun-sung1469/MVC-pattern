@@ -1,10 +1,13 @@
-﻿namespace ASPServerAPI.DTOs.Battle
+﻿using ASPServerAPI.DTOs.Monster;
+using ASPServerAPI.DTOs.Player;
+
+namespace ASPServerAPI.DTOs.Battle
 {
     public class AttackResponse
     {
         public AttackResultDto AttackResult { get; set; } = new();
-        public PlayerStateResponse player { get; set; } = new();
-        public MonsterDto Monster { get; set; } = new();
+        public PlayerStatsResponse player { get; set; } = new();
+        public MonsterStateResponse Monster { get; set; } = new();
         public bool IsMonsterDead { get; set; } 
         public bool IsPlayerDead { get; set; }
         public int CurrentTurn { get; set; }//현재턴?

@@ -1,5 +1,6 @@
 ﻿using ASPServerAPI.Data;
 using ASPServerAPI.Models;
+using Microsoft.EntityFrameworkCore;
 using ASPServerAPI.Repository.Interface;
 
 namespace ASPServerAPI.Repository

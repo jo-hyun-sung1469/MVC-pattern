@@ -1,4 +1,5 @@
 ﻿using ASPServerAPI.DTOs.Monster;
+using ASPServerAPI.DTOs.Battle;
 
 namespace ASPServerAPI.Services.Interface
 {

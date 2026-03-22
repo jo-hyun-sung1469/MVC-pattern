@@ -8,16 +8,16 @@ namespace ASPServerAPI.Controller
     [Route("api/[Controller]")]
     public class AuthController : ControllerBase    
     {
-        private readonly AuthServices _authServices;
+        private readonly AuthService _authService;
         public AuthController(AuthController authController)
         {
-            _authServices = authController;
+            _authService = authController;
         }
 
         [HttpPost("Register")]
         public async Task<IActionResult> Register(RegisterDto register)
         {
-            var result = await _authServices.Register(register);
+            var result = await _authService.Register(register);
             if (result == null)
             {
                 return BadRequest("이미 존재하는 이메일 입니다");
@@ -28,7 +28,7 @@ namespace ASPServerAPI.Controller
         [HttpPost("Login")]
         public async Task<IActionResult> Login(LoginDto login)
         {
-            var result = await _authServices.Login(login);
+            var result = await _authService.Login(login);
             if (result == null)
                 return Unauthorized("Email이나 Password가 올바르지 않습니다");
             return OK(result);

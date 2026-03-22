@@ -1,8 +1,9 @@
-﻿namespace ASPServerAPI.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ASPServerAPI.Models
 {
     public class MonsterEntity
     {
-        [Key]
         public long Id { get; set; }
         public long PlayerId { get; set; }
         public string Name { get; set; } = string.Empty;
