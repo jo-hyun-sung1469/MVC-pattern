@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Micorsoft.IdentityModel.Tokens;
 using ASPServerAPI.Data;
 using ASPServerAPI.Services;
+using ASPServerAPI.Repository;
 using ASPServerAPI.Repository.Interface;
 using ASPServerAPI.Services.Interface;
 
@@ -31,9 +32,11 @@ builder.Services.AddScoped<AuthService>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped(IMonsterRepository, MonsterRepository);
-builder.Services.AddScoped(IMonsterService, MonsterService);
-
+builder.Services.AddScoped(IMonsterRepository, MonsterRepository);//의존성 주입
+builder.Services.AddScoped(IMonsterService, MonsterService);//의존성 주입
+builder.Services.AddScoped(IPlayerService, PlayerService);
+builder.Services.AddScoped(IPlayerRepository, PlayerRepository)
+//요청 생성시
 var app = builder.Build();
 
 if(app.Enviroment.IsDevelopment())
